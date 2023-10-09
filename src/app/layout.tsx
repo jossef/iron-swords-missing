@@ -16,11 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const url = "https://ironswords.org.il/"
   const title = "חרבות ברזל - איתור ועדכון נעדרים";
   const desc = "חרבות ברזל - איתור ועדכון נעדרים";
-
-  const ogUrl = new URL(`${url}/api/og`)
-  ogUrl.searchParams.set("title", title)
-  ogUrl.searchParams.set("type", title)
-  ogUrl.searchParams.set("mode", "dark")
+  const ogUrl = "https://github.com/kaminskypavel/iron-swords-missing/assets/1287098/58dbd3ef-c12a-4ec5-95c2-c08fef6dfa3d"
 
   return {
     title,
@@ -32,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url,
       images: [
         {
-          url: ogUrl.toString(),
+          url: ogUrl,
           width: 1200,
           height: 630,
           alt: title,
@@ -43,7 +39,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: title,
       description: desc,
-      images: [ogUrl.toString()],
+      images: [ogUrl],
     },
   }
 }
